@@ -127,7 +127,7 @@ if __name__ == '__main__':
     #cc = [['橙色','10008365','ORANGE','4895180725395'],
     #      ['深蓝色','10008366','DARK BLUE','4895180725401'],
     #      ['香槟金','10008367','CHAMPAGNE GOLD','4895180725418']]
-    biaoge = os.sep.join([r'D:\python\ktxtms','单独数据1.xlsx'])
+    biaoge = os.sep.join([r'D:\python\ktxtms','20180414.xlsx'])
     
     print(biaoge)
     try:
