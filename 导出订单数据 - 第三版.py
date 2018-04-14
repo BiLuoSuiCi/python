@@ -75,20 +75,22 @@ def pr_out(ktxtms,rq):
 
         df2 = pd.DataFrame(zx,columns=bt2)
 
-        print('开始整理数据.........',int(len(imei)/40),len(zx))
 
-        #df1[df1['毛重'].isnull()] = '11.03'
-        #df1[df1['SNCODE'].isnull()] = 'H4'
-        #df1.fillna({'SNCODE':'H4'})
         df2 = df2.drop_duplicates(['箱号'],keep='last')
 
         #print(df2)
 
+
         if len(imei)/40 != len(zx):
             print('数据有出入。注意复查！差值：',len(imei)/40 - len(zx))
             rq = ''.join([rq,'注意数据复查'])
-            
 
+        print('本次整理出货数据：{}台产品。共{}个卡通箱。'.format(int(len(imei)/40),len(zx)))
+
+        shuju_bd(list(df2['箱号']))
+        #df1[df1['毛重'].isnull()] = '11.03'
+        #df1[df1['SNCODE'].isnull()] = 'H4'
+        #df1.fillna({'SNCODE':'H4'})
         df1.loc[df1['颜色']=='ORANGE',['物料编码','EAN']] = ('10008365','4895180725395')
         df1.loc[df1['颜色']=='DARK BLUE',['物料编码','EAN']] = ('10008366','4895180725401')
         df1.loc[df1['颜色']=='CHAMPAGNE GOLD',['物料编码','EAN']] = ('10008367','4895180725418')
@@ -109,7 +111,17 @@ def pr_out(ktxtms,rq):
         print('导出完成！')
     else:
         print('未搜索到')
+def shuju_bd(ktxh):
 
+    print('开始检测箱号数据，是否获取完全。')
+
+    for ktxraw in ktxtms:
+        if ktxraw not in ktxh:
+            print('卡通箱号: {} 无记录数据，请检测完毕后再次运行'.format(ktxraw))
+            exit()
+        else:
+            print('提供的箱号，已全部查询到数据记录。\n开始按照模板优化数据... ... ')
+    
 if __name__ == '__main__':
 
     #cc = [['橙色','10008365','ORANGE','4895180725395'],
@@ -136,7 +148,9 @@ if __name__ == '__main__':
     print(ktxtms)
 
     print(len(ktxtms))
+
+    rq = os.path.split(biaoge)[1]
+    rq = rq[4:8]
+
+    pr_out(ktxtms,rq)
     
-    pr_out(ktxtms,'0412')
-    
-    print('结束')            
