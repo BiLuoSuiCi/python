@@ -4,7 +4,6 @@ import win32com.client as com
 import datetime,win32gui,win32con
 import pythoncom,PyHook3
 
-
 ###############################################################################################################
 #结束条码程序
 try:
@@ -20,7 +19,6 @@ with open('plan.txt','r') as p:                                                 
 print(s)
 
 key_code = ''
-
 
 bo = int(s) if s[2:10]==rq else int(f"46{rq}000")  
 #print(s[2:10])
