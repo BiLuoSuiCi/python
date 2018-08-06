@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="gbk2132" ?>
+<Config name="Config Dialog 20180322" width="650" height="680">
+    <TabCtrl left="10" top="5" right="625" bottom="565" Visible="1">
+        <Items name="Customer" id="0">
+            <Static name="IMEI Head:" id="12" left="10" top="13" right="80" bottom="22" />
+            <Edit name="_IMEI1Head" id="11" left="90" top="10" right="100" bottom="22" value="V[\V\[" />
+            <Static name="PSN Head:" id="10" left="220" top="13" right="80" bottom="22" />
+            <Edit name="_PSNHead" id="9" left="290" top="10" right="100" bottom="22" value="VkWm\l" />
+            <Static name="PSN Head:" id="11" left="420" top="13" right="80" bottom="22" />
+            <Edit name="_PSNLen" id="10" left="510" top="10" right="100" bottom="22" value="VlYg" readonly="TRUE" />
+            <Static name="WifiMac Head:" id="30" left="10" top="43" right="80" bottom="22" />
+            <Edit name="_WifiMacHead" id="30" left="90" top="40" right="500" bottom="22" value="YgXW^U]][[^U[b" />
+            <Static name="BtMac Head:" id="31" left="10" top="73" right="80" bottom="22" />
+            <Edit name="_BtMacHead" id="32" left="90" top="70" right="500" bottom="22" value="[l][^j[WVd[dXW[ZVWW[V\Z[^dXh" />
+            <Static name="Label Qty:" id="13" left="10" top="103" right="60" bottom="22" />
+            <Edit name="_PrintNumber" id="12" left="90" top="100" right="100" bottom="22" value="WV" />
+            <Static name="SIM Slot:" id="14" left="220" top="103" right="60" bottom="22" />
+            <ComboBox name="_SimNumber" id="0" left="290" top="100" right="100" bottom="20" value="Vm">
+                <Items>None</Items>
+                <Items>1</Items>
+                <Items>2</Items>
+                <Items>3</Items>
+            </ComboBox>
+            <Static name="Shutdown Device:" id="15" left="10" top="138" right="250" bottom="22" />
+            <ComboBox name="_ShutdownDevice" id="1" left="115" top="135" right="180" bottom="20" value="Vm" tip="Do the action after disconnecting device.">
+                <Items>Do not shutdown device</Items>
+                <Items>不关闭手机</Items>
+                <Items>Shutdown device always</Items>
+                <Items>Shutdown device if pass</Items>
+                <Items>Shutdown device if fail</Items>
+            </ComboBox>
+            <Static name="Scan IMEI:" id="16" left="325" top="138" right="90" bottom="22" />
+            <ComboBox name="_ScanIMEI" id="2" left="415" top="135" right="180" bottom="20" value="Vl">
+                <Items>IMEI1 Only(Without IMEI2)</Items>
+                <Items>One IMEI(IMEI2=IMEI+1)</Items>
+                <Items>One IMEI(IMEI3=IMEI+1)</Items>
+            </ComboBox>
+            <Static name="-------------------------------------------------------------Data Base--------------------------------------------------------------------------" id="53" left="10" top="180" right="600" bottom="22" />
+            <Static name="Project Name:" id="0" left="10" top="213" right="100" bottom="22" />
+            <Edit name="_Project_Name" id="0" left="100" top="210" right="100" bottom="22" value="YVUUV\[Y^g\fXm[mVlYcW]Zj" />
+            <Static name="Operator:" id="1" left="210" top="213" right="100" bottom="22" />
+            <Edit name="_Operator" id="1" left="300" top="210" right="100" bottom="22" value="Y\W\UnXV]YZf" />
+            <Static name="PC MAC:" id="2" left="420" top="213" right="100" bottom="22" />
+            <Edit name="_Fixture" id="2" left="510" top="210" right="100" bottom="22" value="WY\h]c[f]lVfWZ\l^`\]Y[Uk" function="GeneralObj,GetMacAddress" readonly="TRUE" />
+            <Static name="Factory Code:" id="24" left="10" top="243" right="100" bottom="22" />
+            <ComboBox name="_Factory_Code" id="24" left="100" top="240" right="100" bottom="22" type="1" value="VlYiYiWl">
+                <Items>1051</Items>
+                <Items>1188_ASS</Items>
+                <Items>1188_SMT</Items>
+                <Items>1186</Items>
+                <Items>1061</Items>
+                <Items>105C</Items>
+                <Items>118D_ASS</Items>
+                <Items>118D_SMT</Items>
+                <Items>CF</Items>
+                <Items>1203</Items>
+                <Items>1201</Items>
+                <Items>1187_ASS</Items>
+                <Items>1187_SMT</Items>
+                <Items>MCM</Items>
+                <Items>1189_SMT</Items>
+                <Items>1189_ASS</Items>
+                <Items>VSUN</Items>
+                <Items>TUW1</Items>
+                <Items>118A</Items>
+                <Items>Gofa</Items>
+                <Items>alamegene</Items>
+            </ComboBox>
+            <Edit name="_Database_List" id="25" left="2000" top="240" right="100" bottom="22" value="VlYiYl]YYdVf\dZY\UVmXlX`[nZj[fWa[m\[\W^UUXW_W[YbYk[nYhZg[YVlW_YVYWZdYYZYWWY]^gWh^aYW\YU_V[VnWl\c\kXiVV^WZfXYZbU[[^Vi[fVj\hWWZ^UcXmWeZnYX[fVg^`\cZl]WZ\WlYb^h]`Y^[jUf^\[c]a\k\jYmWjVX[m[VVV]a]f[d\m[m]mUX]]\U\mZ_]n\iZ[[WViZkVU^[Zn^VWWUVUm^VYWUi\fUYWn]W^UXg[_]d\eZfWaUhUlVZ^bV^YZY]^UZ_X]WaYh\gYdWhZ]ZeZc^V[gZmZ[[`]bXm[hUUV_Vd[WY^^[XlWfYWX\W`Y]]_YnX^W_UmXYXnYWY`]lX^\cUkVYZcWaU^]fXjVg^XWdYUU^WY^[XVXWYnZ[YiYUV\[UYb\UVeUdW[ZXXdZ`Y`]UWcZVXUXU\l^j[iWcWdYmUi\n\`W[[b\mUW\VYdU[ZiVd\WWX\b^\]ZUmZWUnWn\Y]cXcYg\WV\[dUnYnXnWm\\VgWdYhV[X^U]Za[kViZgY_WlWhZ]^[Un[^\jUh[YWbZZ\d\WWbX\UhWkVfX^UhZWWbVYZ\^ZZZ[\Vb^`YYZUWnX`YV[^ZlUa^iXnZX[UYY\_^Y\[[^WmXZZ_Uh\WYZ^i[j[`YfZe]lU_^fZ_Ye[kW_[k^iViX`^c\gUi]cVl]U]`Zk]`X`Yc\[Uc\_]_\h\f^\Xk[aUVXaWf]n\UX]XdUaYVXY[XZi^cUgZd\k][[V^[UV\]Y\Yc^[X^UiYlWg]kXeXlUhZ[W_^Z[XUkWcYWVkVnYV]m\_XbWbX`VfWhWaYiUj^\YgZkZgZd[aZWVh[cW^[nW^[jWWXlUm]WWmUVZfWk[a]X[aYn]^Wf\W^X\gX`U_[[UYX]^WWfYfUiV^Yn\m^_Um\eXbX_^a\cY\]^[dX`VWWZUVX`UWVe[jV[[fVgWj\h\dVWUfUVV\U[[cXiZ]\b[ZUjY_\hZfVhZbWfYWWmVXZkYi\`[h^j\bYmUd\UU_\iX`V^[W[\VbW_WeZhWZ^bVY]WUh]cZY^iZ]^W^j\e[VZ`[Z^^^dUlX_[j^\\c\a\\V\X]Z[U\UgVYZjVlXn^^ZZYU^_^b]VWgVa^bYdXkVnZ[X\]`Yd[ZVZU_UWYZ^iVf]j]_Wm\n^iZ^VlYhVk[j\i^ZYkXi\W\UZVUi]jXg[kWd]`XnXeWiZjVg[`Wn\W\d[UXg\WZlXaWbXa^_VZ[hW\ZlVVZU^jYeV][\Vd\Z\d^jWmVn[cXYX[[iVYV][[Wg\YZfVhXm\]\k\cX^X^U^[kUiU^[`XVYhZfVU^aZn\bWmZfZYYeZZYcUb^aZUW\YhWWWg\kYW[fWhWnWcY[^]Va[g^cYmZ[Wk[cZjVn\^[jVjVhV^]e^i\b\\^^Ud[m\Y]lV\U`]^Zk[]Zb[i[^^Z[UWaXcY]U\[mUl^W^iZ\^jZlXYU[UjYXX\\fWfXnXUXbZX]`\[ZjYbWf\nVg[mYf[e]gWn^aVh]n^ZY]V^Wc[YXbWUWdXX[W]Y\g[mUd\_W^Zg]^VZV_^gYi[kX[UhZUYY[XX_WcUZXWZ]X^Vk[lVU^fV`YUYeXVWgZcZd^h\^[ZZ[Ul]XZlYUZ]We]UXkZfUZ]\Z_V\^YVY\Y\nU^VeW^W^]d\V\aUY[jYm]l^ZZ^\\[kUbU[X`[V]aVe]aU[[iXh[_]U[`[_WXVZ\]YlXbVXU[X_\^VkV\VcWYWd\jWkX`U_[fVaW]XgXW]gZgWg^Y[mUlZ^WWWaZi^V[ZXfWWZ_VV]i^`^[[j^[[a[W\WUm^i\^Yn[`[aV^[VWUXYXjZdZZXhUi[]U^[dWZ\lUcX`^jV`]\Vj\Z\cW_Yk^aV[\U^f^YUkWlZi]]YiW^W[Xd^WZnZnVaVWZX^]XkWbVi[X]Z\kWdZaWUWWXg\gZiVkVXXnWZ\nUhUX[i[][c\ZZcVi]^VZWgV^]b[[[cX\XdWkWY[eXlZiVX\XVWX_Uc[eXhX[Xl^]Zc^cYjZ_]cVVWcZZ]g[dVk\eXbUl[hXbZlYl^jWe^U\b\[\k\]V`WlX\V[VZZUU\]d]l\a[nZVZm^gVWWZ]_[[UhXa\_^X[nYn\_VU]n^fUY^cWYWY^fZ_Ue^gZ\\n^[\m[f[ZZbWiWVViXn^^W`WW^W[eYX\n]n[^VY\e]jYUYWVV^jUl\_Vh\`^[Y\Z_Xk]aYYYn^g[V]k\_YaVYWY]Z\i^[]^Y`]aYXXXWd[V^cZWXkUbXd[k[cZ[\bWi]iZmZh^_XZW`[mUWYbViUe^d]V\mZY]WYhWa^i[c[^Zm[^XYUaXVZV^_UZ]fVm" />
+            <Button name="Query DB Cfg" id="5" left="10" top="300" right="190" bottom="25" action="3,7,8,4,5" type="2" function="MesObj,ParseDatabaseCfg" param="$_Factory_Code,$_Database_List" tip="Query database configration according to factory code." />
+            <Static name="DB Host:" id="3" left="210" top="243" right="100" bottom="22" />
+            <Edit name="_DB_Host" id="3" left="300" top="240" right="100" bottom="22" value="VlYbZjVcVU[\YhYbXV[[]^Yk" />
+            <Static name="DB User:" id="4" left="10" top="273" right="100" bottom="22" />
+            <Edit name="_DB_User" id="4" left="100" top="270" right="100" bottom="22" value="XhXl]d\X]g" />
+            <Static name="DB Password:" id="5" left="210" top="273" right="100" bottom="22" />
+            <Edit name="_DB_Password" id="5" left="300" top="270" right="100" bottom="22" value="YgXW^U]][[^U[b" password="TRUE" />
+            <Static name="Work Order:" id="7" left="10" top="338" right="100" bottom="22" />
+            <Edit name="_Work_Order" id="6" left="100" top="335" right="100" bottom="22" value="VmVd\fUeUbV\ZgYWY\[\" />
+            <Button name="WorkOrder" id="0" left="210" top="335" right="190" bottom="25" action="6" type="2" function="MesObj,QueryWorkOrderNumber" param="$_DB_Host,$_DB_User,$_DB_Password,$_Project_Name" tip="Query workorder(PCBA or Assemble) if DB info is correct" />
+            <Button name="Package WorkOrder" id="1" left="420" top="335" right="190" bottom="25" action="6" type="2" function="MesObj,Package_QueryWorkOrderNumber" param="$_DB_Host,$_DB_User,$_DB_Password,$_Project_Name" tip="Query package workorder if DB info is correct" />
+            <Static name="Data Server:" id="8" left="420" top="243" right="100" bottom="22" />
+            <Edit name="_Data_Server" id="7" left="510" top="240" right="100" bottom="22" value="VlYbZjVcVU[\YhYbXV[[]dUf" />
+            <Static name="Server Port:" id="9" left="420" top="273" right="100" bottom="22" />
+            <Edit name="_Server_Port" id="8" left="510" top="270" right="100" bottom="22" value="WWYZU[Wh" />
+            <CheckBox name="_EnableSQLLog" id="0" left="210" top="300" right="20" bottom="22" value="Vl" hidename="TRUE" />
+            <Static name="Enable SQL Log" id="6" left="230" top="303" right="150" bottom="22" tip="On/Off SQL log" />
+            <Static name="Label Template:" id="17" left="10" top="378" right="90" bottom="22" />
+            <ComboBox name="_LabelGetWay" id="3" left="100" top="375" right="180" bottom="20" value="Vl">
+                <Items>From Local Path</Items>
+                <Items>From MES Database</Items>
+            </ComboBox>
+            <Static name="Print Software:" id="18" left="310" top="378" right="90" bottom="22" />
+            <ComboBox name="_PrintSoftware" id="4" left="400" top="375" right="180" bottom="20" value="Vl">
+                <Items>CodeSoft</Items>
+                <Items>BarTender</Items>
+            </ComboBox>
+            <Static name="-------------------------------------------------------------------------------------------------------------------------------------------------------" id="55" left="10" top="410" right="600" bottom="22" />
+            <Edit name="_MacAddressFile" id="21" left="10" top="450" right="500" bottom="22" value="X_Z]VjV]]bVk]aWkZZ\fV`UY]\VjZfWjZ[U_Ze]eV]VhYa^\" />
+            <Button name="MAC Table" id="2" left="520" top="450" right="95" bottom="22" action="21" type="0" extension="Office Access Files (*.mdb)|*.mdb|" />
+            <Edit name="_LabelFile" id="22" left="10" top="480" right="500" bottom="22" value="We[]XdXeUn]nWZUf[V[jXeYbU[]V]k]cW]" />
+            <Button name="Label Template" id="3" left="520" top="480" right="95" bottom="22" action="22" type="0" extension="Codesoft Files (*.Lab)|*.Lab|BarTender Files (*.btw)|*.btw|" />
+            <Edit name="_LabelSavePath" id="23" left="10" top="510" right="500" bottom="22" value="We[]Vi]eUl\]\k" />
+            <Button name="Label Path" id="4" left="520" top="510" right="95" bottom="22" action="23" type="1" />
+        </Items>
+        <Items name="Platform Settings" id="1">
+            <Static name="---------------------------------------------------------MTK Platform Settings--------------------------------------------------------------" id="50" left="10" top="10" right="600" bottom="22" />
+            <Edit name="_Modem_DB" id="0" left="10" top="40" right="500" bottom="22" value="We[]XdX_W\[]]j[l[e^ZYmX`^aYhWcW[\hXkYi\]YYXkYXUc]ZZaZhYkZlX[VgZbZ_Xe\[UZ\X^bVl]eZZVbZhZnZgUaXcYdU_X`VWVc[l[]U_Z`]n^eYXY]^dWbUkVfWVWZZeZY\W]YWbYc\VVXVaXg\hVUZjZh[c]^ZdVeYnWU[U[YXeV_VgVZ[_UYZZWYY^[`]`^bYe[W^\WcWl\Y]eUZ]^XhU^XaWmY\V[Xc\aZ\[gZf\]UdU\WbVg^[[eZl[aUmUe]nU[\aVi[kXWYbUWUXUnWjVgX^XVUeVeVU\`Wa^c" />
+            <Button name="Modem DB" id="0" left="520" top="40" right="95" bottom="22" action="0" type="0" />
+            <Edit name="_AP_DataBase" id="1" left="10" top="70" right="500" bottom="22" value="We[]XdX_W\[]]j[l[e^ZYmX`^aYhWcW[\hXkYi\]YYXkYXUc]ZZaZhYkZlX[VgZbZ_Xe\[UZ\X^bVl]eZZVbZhZnZgUaXcYdU_X`VWVc[l[]U_Z`]n^eYXY]^dWbUkVfWVWZZeZY\W]YWbYc\VVXVaXg\hVUZjZh\]]h[dYW" />
+            <Button name="AP DB" id="1" left="520" top="70" right="95" bottom="22" action="1" type="0" />
+            <CheckBox name="82and90ChipsForLTE" id="0" left="300" top="110" right="20" bottom="22" value="Vl" hidename="TRUE" />
+            <Static name="Multiple SW Image/Modem Type" id="1" left="320" top="113" right="250" bottom="22" />
+            <CheckBox name="_ConnectInMetaMode" id="1" left="300" top="130" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Connect Target Aleady In META Mode" id="2" left="320" top="133" right="250" bottom="22" />
+            <CheckBox name="_EnableAdbDevice" id="2" left="300" top="150" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Enable Adb Device" id="3" left="320" top="153" right="350" bottom="22" tip="This feature will impact VCOM port number" />
+            <CheckBox name="_EnableMetaLog" id="3" left="300" top="170" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Enable Meta Log" id="4" left="320" top="173" right="250" bottom="22" />
+            <CheckBox name="_AutoDetectPort" id="4" left="10" top="110" right="20" bottom="22" value="Vl" hidename="TRUE" />
+            <Static name="Auto-Detect COM PORT" id="5" left="30" top="113" right="200" bottom="22" />
+            <ListCtrl name="PreloaderPort1;KernelPort1;PreloaderPort2;KernelPort2;PreloaderPort3;KernelPort3;PreloaderPort4;KernelPort4;PreloaderPort5;KernelPort5;PreloaderPort6;KernelPort6" id="1" left="10" top="140" right="250" bottom="150" scale="4:1" variables="_PreloaderPort1;_KernelPort1;_PreloaderPort2;_KernelPort2;_PreloaderPort3;_KernelPort3;_PreloaderPort4;_KernelPort4;_PreloaderPort5;_KernelPort5;_PreloaderPort6;_KernelPort6" values="VlYdY]^^^h^V[ZU^Vg]hU^YYW_W^UW\lX`]Z[lUU]d[]ZkWl[`]Y" tip="Configurate COM port for META of MTK platform" />
+            <Static name="--------------------------------------------------------SPRD Platform Settings-------------------------------------------------------------" id="51" left="10" top="310" right="600" bottom="22" />
+            <Static name="Chip Type:" id="14" left="10" top="348" right="250" bottom="22" />
+            <ComboBox name="_ChipType" id="0" left="85" top="345" right="200" bottom="20" value="Vk">
+                <Items>GSM(Feasure Phone)</Items>
+                <Items>TDSCDMA</Items>
+                <Items>WCDMA</Items>
+                <Items>LTE</Items>
+                <Items>WCDMA+GSM(Smart Phone)</Items>
+            </ComboBox>
+            <Static name="------------------------------------------------------Qualcomm Platform Settings--------------------------------------------------------" id="52" left="10" top="400" right="600" bottom="22" />
+            <Static name="WaitTime(s):" id="15" left="10" top="433" right="70" bottom="22" />
+            <Edit name="_Qualcomm_WaitTime" id="2" left="85" top="430" right="50" bottom="22" value="WWXk" tip="Set up waiting time(s) for the phone completely boot." />
+        </Items>
+        <Items name="Test Items" id="2">
+            <CheckBox name="_bEnableGSensorCal" id="1" left="10" top="10" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Enable GSensor Cal" id="18" left="30" top="13" right="135" bottom="22" />
+            <CheckBox name="_bEnableGYROscopeCal" id="2" left="200" top="10" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Enable GYROscope Cal" id="19" left="220" top="13" right="135" bottom="22" />
+            <CheckBox name="_bCheckGPSCal" id="3" left="400" top="10" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Check GPS Data" id="20" left="420" top="13" right="135" bottom="22" />
+            <CheckBox name="_bCheckSDCard" id="4" left="10" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Check SD Card" id="21" left="30" top="43" right="135" bottom="22" />
+            <CheckBox name="_bCheckSIM1" id="5" left="200" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Check SIM1" id="22" left="220" top="43" right="135" bottom="22" />
+            <CheckBox name="_bCheckSIM2" id="6" left="300" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Check SIM2" id="23" left="320" top="43" right="135" bottom="22" />
+            <CheckBox name="_bCheckSIM3" id="36" left="400" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Check SIM3" id="36" left="420" top="43" right="135" bottom="22" />
+            <CheckBox name="_bCheckRAMSize" id="7" left="320" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Check RAM Size" id="24" left="340" top="73" right="90" bottom="22" />
+            <Edit name="_RAMSizeLower" id="13" left="445" top="70" right="50" bottom="22" value="Vm" />
+            <Static name=" ~ " id="25" left="505" top="73" right="10" bottom="22" />
+            <Edit name="_RAMSizeUpper" id="14" left="525" top="70" right="50" bottom="22" value="Vn" />
+            <Static name="G" id="26" left="585" top="73" right="10" bottom="22" />
+            <CheckBox name="_bCheckROMSize" id="8" left="10" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Check ROM Size" id="27" left="30" top="73" right="100" bottom="22" />
+            <Edit name="_ROMSizeLower" id="15" left="135" top="70" right="50" bottom="22" value="VmVg" />
+            <Static name=" ~ " id="28" left="195" top="73" right="10" bottom="22" />
+            <Edit name="_ROMSizeUpper" id="16" left="215" top="70" right="50" bottom="22" value="Vn]`" />
+            <Static name="G" id="29" left="275" top="73" right="10" bottom="22" />
+            <CheckBox name="_bCheckTPFW" id="9" left="10" top="100" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Check TPFInfo" id="30" left="30" top="103" right="120" bottom="22" />
+            <Edit name="_TPFirmware" id="17" left="135" top="100" right="160" bottom="22" value="X[]ZYY\^UaUYWj\hU\WX]iUj^fZ\" tip="Show TP firmware list seperated by comma" />
+            <Edit name="_TPVendor" id="18" left="320" top="100" right="160" bottom="22" value="X[]ZYiWe[nXY[]Z_[ZZ\Xf[^\Z]f]^]aU]ZnYn" tip="Show TP verndor list seperated by comma" />
+            <CheckBox name="CheckAP_Ver" id="10" left="10" top="130" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="CheckAP Version" id="31" left="30" top="133" right="95" bottom="22" />
+            <Edit name="_AP_Version" id="19" left="135" top="130" right="470" bottom="22" value="WbXj" />
+            <CheckBox name="CheckBP_Ver" id="11" left="10" top="160" right="20" bottom="22" value="Vl" hidename="TRUE" />
+            <Static name="CheckBP Version" id="32" left="30" top="163" right="95" bottom="22" />
+            <Edit name="_BP_Version" id="20" left="135" top="160" right="470" bottom="22" value="YVUUV\[Y^i\XU^\X^W[VWVWfUXWiX_W^\hZb]i[mYa^_\dV]UlYf^_^gVnUgUdYeY^XgXnUdY[" />
+            <Static name="Battery Voltage Range" id="33" left="10" top="193" right="150" bottom="22" />
+            <Edit name="_BatteryVoltageMin" id="21" left="135" top="190" right="50" bottom="22" value="Vn]VWZUV" readonly="TRUE" />
+            <Static name=" ~ " id="34" left="195" top="193" right="10" bottom="22" />
+            <Edit name="_BatteryVoltageMax" id="22" left="215" top="190" right="50" bottom="22" value="WUZXYX]]" readonly="TRUE" />
+            <Static name="mV" id="35" left="275" top="193" right="20" bottom="22" />
+            <CheckBox name="_RX_Level" id="12" left="10" top="226" right="20" bottom="22" value="Vl" hidename="TRUE" />
+            <Static name="RX Level" id="37" left="30" top="229" right="100" bottom="22" />
+            <Edit name="_RX_Level_Lower" id="23" left="135" top="226" right="50" bottom="22" value="VlYg" />
+            <Static name=" ~ " id="38" left="195" top="229" right="10" bottom="22" />
+            <Edit name="_RX_Level_Upper" id="24" left="215" top="226" right="50" bottom="22" value="Vn]d" />
+            <CheckBox name="_CheckSapCode" id="13" left="10" top="256" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Check SAPCode" id="39" left="30" top="259" right="100" bottom="22" />
+            <Edit name="_SapCode" id="40" left="135" top="256" right="470" bottom="22" value="WbXj" />
+        </Items>
+        <Items name="CalFT" id="3">
+            <Static name="Equipments:" id="0" left="10" top="14" right="250" bottom="22" />
+            <ComboBox name="_Tester" id="0" left="90" top="10" right="100" bottom="20" value="WU">
+                <Items>AG8960</Items>
+                <Items>SP6010</Items>
+                <Items>MT8820A</Items>
+                <Items>CMU200</Items>
+                <Items>CMW500</Items>
+                <Items>EXT</Items>
+                <Items>EXM</Items>
+                <Items>T6280</Items>
+                <Items>T6290</Items>
+                <Items>CTP3110</Items>
+                <Items>IQXstream</Items>
+                <Items>IQM</Items>
+                <Items>PXI3000</Items>
+                <Items>MT8870</Items>
+            </ComboBox>
+            <CheckBox name="_Equip_ConnectByEthernet" id="0" left="10" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Equipments Connect by Ethernet:" id="1" left="30" top="43" right="200" bottom="22" />
+            <Edit name="_Equip_IPAddr" id="5" left="220" top="40" right="120" bottom="22" value="VlYbZjVcVU[\YhYbWn]cVa" tip="Input equipments IP address if Equipments Connect by Ethernet." />
+            <Edit name="_CalFt_LogPath" id="0" left="10" top="75" right="500" bottom="22" value="We[]XdYc]dZe" />
+            <Button name="Log Path" id="0" left="520" top="75" right="95" bottom="22" action="0" type="1" tip="Select CFT log save path." />
+            <Static name="---------------------------------------------------------MTK Platform Settings--------------------------------------------------------------" id="2" left="10" top="110" right="600" bottom="22" />
+            <Edit name="_CalFt_CommonCfgIni" id="1" left="10" top="140" right="500" bottom="22" value="We[]XdX[U`We\]Zf[lXfYjUdZX\dZgZfVbZXVj][[dX\VdZ^^dYjZ^YmWX^bZk[c" />
+            <Button name="Common setup" id="1" left="520" top="140" right="95" bottom="22" action="1" type="0" extension="INI Files (*.ini)|*.ini|" tip="Select common setup ini for new mtk platform" />
+            <Edit name="_CalFt_CalINI" id="2" left="10" top="170" right="500" bottom="22" value="We[]XdX[U`We\]Zf[c\^V\\_WiVbWh]UXX^^UX]g]VUfY\YkUaW_\nViWhVh[lYUZlV\YZ\WYc^gW`UgVi^XYXYY]i\Z[bY_Yf\aU[VZWjUW[^\`V`\l]hXV[XUm]dX_^bUhYhUk\cWeXh^gXm\kXlXZ]n^c[hYV]i]\\nXY[fVnVh\VYaXU]ZUkXj[dZUXcWWW_[h^d^cVb]nZfWcWY[_X\]\UcVjXh[iVV]_Xd]]WcWlZgUnWYVeYXXdVjUY]eZY^`[d" />
+            <Button name="Cal INI" id="2" left="520" top="170" right="95" bottom="22" action="2" type="0" extension="INI Files (*.ini)|*.ini|" tip="Select ATE Calibration INI file" />
+            <Edit name="_CalFt_ConfigFile" id="3" left="10" top="200" right="500" bottom="22" value="We[]XdX[U`We\]Zf[c\^V\\_WiVbWh]UXX^^UX]g]VUfY\YkUaW_\nViWhVh[lYUZlV\YZ\WYc^gW`UgVi^XYXYY]i\Z[bY_Yf\aU[VZWjUW[^\`V`\l]hXV[XUm]dX_^bUhYhUk\cWeXh^gXm\kXlXZ]n^c[hYV]i]\\nXY[fVnVh\VYaXU]ZUkXj[dZUXcWWW_[h^d^cVb]nZfWcWY[_X\]\UcVjXh[iVV]_Xd]]WcWlZgUnWYVeYXXdVjUY]eZ_UlWZ" />
+            <Button name="Config File" id="3" left="520" top="200" right="95" bottom="22" action="3" type="0" extension="Cfg Files (*.cfg)|*.cfg|" tip="Select ATE CFT Config file" />
+            <Button name="CFT Common Config" id="4" left="65" top="235" right="150" bottom="50" action="" type="3" function="CMTKLibCalFtObj00,Dlg_CFTConfig" param="$_CalFt_CommonCfgIni" tip="Show MTK CFT common config dialog." />
+            <Button name="Cableloss Config" id="5" left="300" top="235" right="150" bottom="50" action="" type="3" function="CMTKLibCalFtObj00,Dlg_CablelossConfig" param="$_CalFt_ConfigFile" tip="Show MTK CFT Cableloss dialog." />
+            <Static name="------------------------------------------------------Qualcomm Platform Settings--------------------------------------------------------" id="3" left="10" top="320" right="600" bottom="22" />
+            <Edit name="_Cal_xtt" id="10" left="10" top="350" right="500" bottom="22" value="WfX^]]V\]ZUU]Y]UVfYd]gY\[kWVYYUfUn]_\m]iYb\\]^X]\bW\^Z\Y\l" />
+            <Button name="Cal XTT" id="6" left="520" top="350" right="95" bottom="22" action="10" type="0" extension="XTT Files (*.xtt)|*.xtt|" tip="Select XTT File for Qualcomm calibration." />
+            <Edit name="_FT_xtt" id="11" left="10" top="380" right="500" bottom="22" value="WfX^]]V\]ZUU]Y]UVfYd]gY\[kWVYYUfUn]_\m]iYb\\]a^a[e\X\jXi" />
+            <Button name="FT XTT" id="7" left="520" top="380" right="95" bottom="22" action="11" type="0" extension="XTT Files (*.xtt)|*.xtt|" tip="Select XTT File for Qualcomm FinalTest." />
+            <Edit name="_Cableloss_Qualcomm" id="12" left="10" top="410" right="500" bottom="22" value="WfX^]]YbVdViZVX[^h]kXbXY]dWeWXWe\`ZX]e^gYl^UYbW^[b\bU`^_VUY`XW^V[mYf" />
+            <Button name="Cableloss" id="8" left="520" top="410" right="95" bottom="22" action="12" type="0" extension="Qualcomm Cableloss Files (*.ini)|*.ini|" tip="Select cableloss File for Qualcomm CFT." />
+            <CheckBox name="_Enable_DetailLog" id="1" left="10" top="440" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Enable Detail Log" id="4" left="30" top="443" right="100" bottom="22" />
+            <Button name="Qcom Cableloss Config" id="9" left="300" top="445" right="150" bottom="50" action="" type="3" function="GeneralObj,Dlg_ShowQcomCftCableloss" param="$_Cableloss_Qualcomm" tip="Show Qualcomm CFT Cableloss dialog." />
+        </Items>
+        <Items name="ATA" id="4">
+            <Static name="Test Item��" id="0" left="10" top="10" right="135" bottom="22" />
+            <CheckBox name="_bSWVersion" id="1" left="10" top="30" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="SW Version" id="1" left="30" top="33" right="135" bottom="22" />
+            <CheckBox name="_bBarcode" id="2" left="10" top="50" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Barcode" id="2" left="30" top="53" right="135" bottom="22" />
+            <CheckBox name="_bEMMC" id="3" left="10" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="EMMC" id="3" left="30" top="73" right="135" bottom="22" />
+            <CheckBox name="_bRTC" id="4" left="10" top="90" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="RTC" id="4" left="30" top="93" right="135" bottom="22" />
+            <CheckBox name="_bWIFI" id="5" left="10" top="110" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="WIFI" id="5" left="30" top="113" right="135" bottom="22" />
+            <CheckBox name="_bBT" id="6" left="10" top="130" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="BT" id="6" left="30" top="133" right="135" bottom="22" />
+            <CheckBox name="_bCharger" id="7" left="10" top="150" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Charger" id="7" left="30" top="153" right="135" bottom="22" />
+            <CheckBox name="_bGSensor" id="8" left="10" top="170" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="G-Sensor" id="8" left="30" top="173" right="135" bottom="22" />
+            <CheckBox name="_bMSensor" id="9" left="10" top="190" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="M-Sensor" id="9" left="30" top="193" right="135" bottom="22" />
+            <CheckBox name="_bALSPS" id="10" left="10" top="210" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="ALS_PS" id="10" left="30" top="213" right="135" bottom="22" />
+            <CheckBox name="_bGYROSCOPE" id="11" left="120" top="30" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="GYROSCOPE" id="11" left="140" top="33" right="135" bottom="22" />
+            <CheckBox name="_bUSBTypeC" id="12" left="120" top="50" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="USB Type-C" id="12" left="140" top="53" right="135" bottom="22" />
+            <CheckBox name="_bLCM" id="13" left="120" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LCM" id="13" left="140" top="73" right="135" bottom="22" />
+            <CheckBox name="_bTouchPanel" id="14" left="120" top="90" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="TouchPanel" id="14" left="140" top="93" right="135" bottom="22" />
+            <CheckBox name="_bMainCamera" id="15" left="120" top="110" right="20" bottom="22" value="Vl" hidename="TRUE" />
+            <Static name="MainCamera" id="15" left="140" top="113" right="135" bottom="22" />
+            <CheckBox name="_bMain2Camera" id="16" left="120" top="130" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Main2Camera" id="16" left="140" top="133" right="135" bottom="22" />
+            <CheckBox name="_bSubCamera" id="17" left="120" top="150" right="20" bottom="22" value="Vl" hidename="TRUE" />
+            <Static name="SubCamera" id="17" left="140" top="153" right="135" bottom="22" />
+            <CheckBox name="_bGPS" id="18" left="120" top="170" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="GPS" id="18" left="140" top="173" right="135" bottom="22" />
+            <CheckBox name="_bTCard" id="19" left="120" top="190" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="T Card" id="19" left="140" top="193" right="135" bottom="22" />
+            <CheckBox name="_bSIM" id="20" left="120" top="210" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="SIM" id="20" left="140" top="213" right="135" bottom="22" />
+            <CheckBox name="_bKeyPad" id="21" left="230" top="30" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Key Pad" id="21" left="250" top="33" right="135" bottom="22" />
+            <CheckBox name="_bSignalRSSI" id="22" left="230" top="50" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Signal RSSI" id="22" left="250" top="53" right="135" bottom="22" />
+            <CheckBox name="_bMHL" id="23" left="230" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="MHL" id="23" left="250" top="73" right="135" bottom="22" />
+            <CheckBox name="_bHDMI" id="24" left="230" top="90" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="HDMI" id="24" left="250" top="93" right="135" bottom="22" />
+            <CheckBox name="_bReceiver" id="25" left="230" top="110" right="20" bottom="22" value="Vl" hidename="TRUE" />
+            <Static name="Receiver" id="25" left="250" top="113" right="135" bottom="22" />
+            <CheckBox name="_bSpeaker" id="26" left="230" top="130" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Speaker" id="26" left="250" top="133" right="135" bottom="22" />
+            <CheckBox name="_bHeadset" id="27" left="230" top="150" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Headset" id="27" left="250" top="153" right="135" bottom="22" />
+            <CheckBox name="_bFM" id="28" left="230" top="170" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="FM" id="28" left="250" top="173" right="135" bottom="22" />
+            <CheckBox name="_bMic" id="29" left="230" top="190" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Mic" id="29" left="250" top="193" right="135" bottom="22" />
+            <CheckBox name="_bFingerPrint" id="30" left="230" top="210" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="FingerPrint" id="30" left="250" top="213" right="135" bottom="22" />
+            <CheckBox name="_bADC" id="31" left="340" top="30" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="ADC" id="31" left="360" top="33" right="135" bottom="22" />
+            <CheckBox name="_bVibrator" id="32" left="340" top="50" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Vibrator" id="32" left="360" top="53" right="135" bottom="22" />
+            <CheckBox name="_bLED" id="33" left="340" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LED" id="33" left="360" top="73" right="135" bottom="22" />
+            <CheckBox name="_bOTG" id="34" left="340" top="90" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="OTG" id="34" left="360" top="93" right="135" bottom="22" />
+            <CheckBox name="_bIdleCurrent" id="35" left="340" top="110" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Idle Current" id="35" left="360" top="113" right="135" bottom="22" />
+            <CheckBox name="_bOffCurrent" id="36" left="340" top="130" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Off Current" id="36" left="360" top="133" right="135" bottom="22" />
+            <CheckBox name="_bFlashLight" id="37" left="340" top="150" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="FlashLight" id="37" left="360" top="153" right="135" bottom="22" />
+            <CheckBox name="_bVoltage" id="38" left="340" top="170" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Voltage" id="38" left="360" top="173" right="135" bottom="22" />
+            <CheckBox name="_bPowerCurrent" id="39" left="340" top="190" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="PowerCurrent" id="39" left="360" top="193" right="135" bottom="22" />
+            <CheckBox name="_bIRTX" id="40" left="340" top="210" right="20" bottom="22" value="Vl" hidename="TRUE" />
+            <Static name="IRTX" id="40" left="360" top="213" right="135" bottom="22" />
+            <Static name="Current Measure Chip Port Support" id="41" left="10" top="253" right="250" bottom="22" />
+            <CheckBox name="_bChipPort" id="41" left="210" top="250" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="COM1" id="42" left="10" top="280" right="40" bottom="22" />
+            <Edit name="_ATACOM1" id="42" left="50" top="277" right="40" bottom="22" value="Vl" />
+            <Static name="COM2" id="43" left="120" top="280" right="40" bottom="22" />
+            <Edit name="_ATACOM2" id="43" left="160" top="277" right="40" bottom="22" value="Vm" />
+            <Static name="COM3" id="44" left="230" top="280" right="40" bottom="22" />
+            <Edit name="_ATACOM3" id="44" left="270" top="277" right="40" bottom="22" value="Vn" />
+            <Static name="COM4" id="45" left="340" top="280" right="40" bottom="22" />
+            <Edit name="_ATACOM4" id="45" left="380" top="277" right="40" bottom="22" value="WU" />
+            <Static name="FM Frequency:" id="46" left="10" top="310" right="80" bottom="22" />
+            <Edit name="_FMFREQ" id="46" left="120" top="307" right="40" bottom="22" value="WY\eUl" />
+            <Static name="100HZ" id="47" left="160" top="310" right="40" bottom="22" />
+            <Static name="WIFI BG Test:" id="48" left="10" top="340" right="80" bottom="22" />
+            <CheckBox name="_bWIFIBG" id="48" left="100" top="337" right="40" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="GPS BG Test:" id="49" left="150" top="340" right="80" bottom="22" />
+            <CheckBox name="_bGPSBG" id="49" left="230" top="337" right="40" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="Write Bench Flag:" id="50" left="10" top="370" right="150" bottom="22" />
+            <CheckBox name="_bWriteBenchFlag" id="50" left="120" top="367" right="40" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="IRTX Device COM" id="51" left="10" top="400" right="250" bottom="22" />
+            <Static name="COM1" id="52" left="10" top="430" right="40" bottom="22" />
+            <Edit name="_DEVICECOM1" id="52" left="50" top="427" right="40" bottom="22" value="Vn" />
+            <Static name="COM2" id="53" left="120" top="430" right="40" bottom="22" />
+            <Edit name="_DEVICECOM2" id="53" left="160" top="427" right="40" bottom="22" value="Vk" />
+            <Static name="COM3" id="54" left="230" top="430" right="40" bottom="22" />
+            <Edit name="_DEVICECOM3" id="54" left="270" top="427" right="40" bottom="22" value="Vk" />
+            <Static name="COM4" id="55" left="340" top="430" right="40" bottom="22" />
+            <Edit name="_DEVICECOM4" id="55" left="380" top="427" right="40" bottom="22" value="Vk" />
+        </Items>
+        <Items name="SPRD Cali Flag" id="5">
+            <Static name="GSM Calibration��" id="0" left="10" top="10" right="135" bottom="22" />
+            <CheckBox name="_bGSM_ADC" id="1" left="30" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="ADC" id="1" left="50" top="43" right="135" bottom="22" />
+            <CheckBox name="_b850M_AGC" id="2" left="150" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="850M_AGC" id="2" left="170" top="43" right="135" bottom="22" />
+            <CheckBox name="_bEGSM_AGC" id="3" left="270" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="EGSM_AGC" id="3" left="290" top="43" right="135" bottom="22" />
+            <CheckBox name="_bDCS_AGC" id="4" left="390" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="DCS_AGC" id="4" left="410" top="43" right="135" bottom="22" />
+            <CheckBox name="_bPCS_AGC" id="5" left="510" top="40" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="PCS_AGC" id="5" left="530" top="43" right="135" bottom="22" />
+            <CheckBox name="_bGSM_AFC" id="6" left="30" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="AFC" id="6" left="50" top="73" right="135" bottom="22" />
+            <CheckBox name="_b850M_APC" id="7" left="150" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="850M_APC" id="7" left="170" top="73" right="135" bottom="22" />
+            <CheckBox name="_bEGSM_APC" id="8" left="270" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="EGSM_APC" id="8" left="290" top="73" right="135" bottom="22" />
+            <CheckBox name="_bDCS_APC" id="9" left="390" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="DCS_APC" id="9" left="410" top="73" right="135" bottom="22" />
+            <CheckBox name="_bPCS_APC" id="10" left="510" top="70" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="PCS_APC" id="10" left="530" top="73" right="135" bottom="22" />
+            <Static name="TDSCDMA Calibration��" id="11" left="10" top="120" right="135" bottom="22" />
+            <CheckBox name="_bTD_AFC" id="12" left="30" top="150" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="TD_AFC" id="12" left="50" top="153" right="135" bottom="22" />
+            <CheckBox name="_bTD_AGC_20" id="13" left="150" top="150" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="TD_AGC(2.0G)" id="13" left="170" top="153" right="135" bottom="22" />
+            <CheckBox name="_bTD_APC_20" id="14" left="270" top="150" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="TD_APC(2.0G)" id="14" left="290" top="153" right="135" bottom="22" />
+            <CheckBox name="_bTD_AGC_19" id="15" left="390" top="150" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="TD_AGC(1.9G)" id="15" left="410" top="153" right="135" bottom="22" />
+            <CheckBox name="_bTD_APC_19" id="16" left="510" top="150" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="TD_APC(1.9G)" id="16" left="530" top="153" right="135" bottom="22" />
+            <Static name="WCDMA Calibration��" id="17" left="10" top="200" right="135" bottom="22" />
+            <CheckBox name="_bBandI" id="18" left="30" top="230" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="BandI" id="18" left="50" top="233" right="135" bottom="22" />
+            <CheckBox name="_bBandII" id="19" left="150" top="230" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="BandII" id="19" left="170" top="233" right="135" bottom="22" />
+            <CheckBox name="_bBandV" id="20" left="270" top="230" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="BandV" id="20" left="290" top="233" right="135" bottom="22" />
+            <CheckBox name="_bBandVIII" id="21" left="390" top="230" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="BandVIII" id="21" left="410" top="233" right="135" bottom="22" />
+            <Static name="LTE Calibration��" id="22" left="10" top="280" right="135" bottom="22" />
+            <CheckBox name="_bLTE_AFC_TDD" id="23" left="30" top="310" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LTE AFC TDD" id="23" left="50" top="313" right="135" bottom="22" />
+            <CheckBox name="_bLTE_AGC_TDD" id="24" left="150" top="310" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LTE AGC TDD" id="24" left="170" top="313" right="135" bottom="22" />
+            <CheckBox name="_bLTE_APC_TDD" id="25" left="270" top="310" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LTE APC TDD" id="25" left="290" top="313" right="135" bottom="22" />
+            <CheckBox name="_bAntenna_LTE_Flag_TDD" id="26" left="390" top="310" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="ANTENNA  LTE FLAG TDD" id="26" left="410" top="313" right="185" bottom="22" />
+            <CheckBox name="_bLTE_AFC_FDD" id="27" left="30" top="340" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LTE AFC FDD" id="27" left="50" top="343" right="135" bottom="22" />
+            <CheckBox name="_bLTE_AGC_FDD" id="28" left="150" top="340" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LTE AGC FDD" id="28" left="170" top="343" right="135" bottom="22" />
+            <CheckBox name="_bLTE_APC_FDD" id="29" left="270" top="340" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LTE APC FDD" id="29" left="290" top="343" right="135" bottom="22" />
+            <CheckBox name="_bAntenna_LTE_Flag_FDD" id="30" left="390" top="340" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="ANTENNA  LTE FLAG FDD" id="30" left="410" top="343" right="185" bottom="22" />
+            <Static name="Final Test��" id="31" left="10" top="390" right="135" bottom="22" />
+            <CheckBox name="_b850M_FT" id="32" left="30" top="420" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="850M FT" id="32" left="50" top="423" right="135" bottom="22" />
+            <CheckBox name="_bEGSM_FT" id="33" left="150" top="420" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="EGSM FT" id="33" left="170" top="423" right="135" bottom="22" />
+            <CheckBox name="_bDCS_FT" id="34" left="270" top="420" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="DCS FT" id="34" left="290" top="423" right="135" bottom="22" />
+            <CheckBox name="_bPCS_FT" id="35" left="390" top="420" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="PCS FT" id="35" left="410" top="423" right="135" bottom="22" />
+            <CheckBox name="_bTD_FT" id="36" left="30" top="450" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="TD FT" id="36" left="50" top="453" right="135" bottom="22" />
+            <CheckBox name="_bWCDMA_FT" id="37" left="150" top="450" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="WCDMA FT" id="37" left="170" top="453" right="135" bottom="22" />
+            <CheckBox name="_bLTE_FT_TDD" id="38" left="270" top="450" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LTD FT TDD" id="38" left="290" top="453" right="135" bottom="22" />
+            <CheckBox name="_bLTE_FT_FDD" id="39" left="390" top="450" right="20" bottom="22" value="Vk" hidename="TRUE" />
+            <Static name="LTE FT FDD" id="39" left="410" top="453" right="135" bottom="22" />
+        </Items>
+        <Items name="Coupling Test" id="6">
+            <Static name="---------------------------------------------------------------Coupling Test--------------------------------------------------------------------" id="1" left="10" top="10" right="600" bottom="22" />
+            <Edit name="_CouplingTestConfigFile" id="0" left="10" top="40" right="500" bottom="22" value="Wd^UZW]cX^X^Wg[iUhYU]\^]Xd]e[[Uh[c][YgWZYf^e\c[`Zk\]\c]XZVWgUWVn^UW^]i]XUWVU^fWh^h]dVc[^[n[^]hYWXlVZVjVf[^\X\XZ_[hZ]XlYgU[Xf[lVeW\Z`^iYm]j]lXn^gYeYh[gW\ZXZ[[_XfZg\n]]XdUk\W[n\[Uh]V[lX]Uc^i[V\_YdUkUUWk^aUVXb^_Vc^^[e[fVd\X" />
+            <Button name="Coupling ini" id="1" left="520" top="40" right="95" bottom="22" action="0" type="0" extension="Ini Files (*.ini)|*.ini|" tip="Use for choosing config file of coupling." />
+            <Button name="Coupling Config" id="4" left="450" top="80" right="150" bottom="50" action="" type="3" function="GeneralObj,Dlg_ShowCouplingTestConfig" param="$_CouplingTestConfigFile" tip="Show Coupling test config dialog." />
+            <Static name="--------------------------------------------------------------Cableloss Test-------------------------------------------------------------------" id="2" left="10" top="200" right="600" bottom="22" />
+            <Edit name="_CableLossConfigFile" id="1" left="10" top="480" right="500" bottom="22" value="WfX^]]YbVdViZVX[^ZVc^\VeZiVl]i^_]j[k^jXfXYUhUnXX]^\b\UVY" />
+            <Button name="Golden config" id="2" left="520" top="480" right="95" bottom="22" action="1" type="0" extension="Ini Files (*.ini)|*.ini|" tip="Use for choosing setup ini file of make golden board and measure loss." />
+            <Edit name="_SaveCableLossFile" id="2" left="10" top="510" right="500" bottom="22" value="WfX^]]YbVdViZVX[^ZVc^\VeZiVl]i^_]j[bVV[WUU]hUbUZ^^" />
+            <Button name="Output loss" id="3" left="520" top="510" right="95" bottom="22" action="2" type="0" extension="Output Files (*)|*|" tip="Use for choosing save loss file of measure loss." />
+        </Items>
+    </TabCtrl>
+    <FileEdit left="10" top="576" right="510" bottom="25" />
+    <FileButton name="XML Config File" left="525" top="575" right="100" bottom="25" />
+    <OK name="OK" left="100" top="605" right="150" bottom="40" />
+    <Cancel name="Cancel" left="390" top="605" right="150" bottom="40" />
+</Config>
