@@ -177,12 +177,7 @@ def send_box(xx):
     hwnd2 = win32gui.FindWindowEx(hwnd1,None,"TGridPanel",None)
 
     hwnd3 = win32gui.FindWindowEx(hwnd2,None,"TcxButton",None)
-    print(hwnd3)
-    if not hwnd3:
-
-        hwnd3 = win32gui.FindWindowEx(hwnd2,None,"TcxLabel",sl) 
-        #根据控件ID获取句柄（控ID固定的窗口）   
-        #hwnd3 = win32gui.GetDlgItem(hwnd2,659556)
+    
     if hwnd3:
         #print(hwnd3) 
         #更改控件内容
