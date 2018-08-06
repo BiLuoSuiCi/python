@@ -34,7 +34,8 @@ w = com.DispatchEx('bartender.Application')
 #模板是否可见
 w.Visible = 0   
 
-#btformat = w.formats.open(r'D:\pycode\栈板信息.btw',True,'')
+btformat = w.formats.open(r'D:\pycode\栈板信息.btw',True,'')
+
 ################################################################################################################
 def sql_out(sql):
     '''查询数据'''
@@ -77,7 +78,7 @@ def printer(plan,boxs,txt,boxtxt):
     #关闭标签模板。1为保存，0为不保存（True=1，False=0）。
     #btformat.close(1) 
 
-def df_zl(df):
+def df_zl(df,bd=False,zbh=None):
 
     bs = []
 
@@ -114,20 +115,26 @@ def df_zl(df):
     boxs = [x+"\n" for x in box]
 
     x = len(box)
-    
-    bo += 1
+    #根据bd的状态决定是否写到数据库（TRUE写）
+    if bd:
+        
+        bo += 1
 
-    plan = str(bo)
+        plan = str(bo)
 
-    for i in range(x):
+        for i in range(x):
 
-        b = (plan,x,box[i])
+            b = (plan,x,box[i])
 
-        bs.append(str(b))
+            bs.append(str(b))
 
-    qt = ",".join(bs)
+        qt = ",".join(bs)
 
-    sql_in(qt)
+        sql_in(qt)
+
+    else:
+                  
+        plan = zbh
 
     boxs_txt = "".join(boxs)
 
@@ -135,12 +142,14 @@ def df_zl(df):
     
     boxtxt = " , ".join(box)
     
-    print(bo)
+    print(plan)
 
     printer(plan,boxs_txt,txt,boxtxt)
 
-    with open('plan.txt','w') as s:
-        s.write(plan)
+    if bd:
+
+        with open('plan.txt','w') as s:
+            s.write(plan)
 
 def gjsql(ktxtms):
     '''构建查询语句'''
@@ -167,6 +176,29 @@ def gjsql(ktxtms):
     WHERE BOX_NO IN {ktxtms}'''
     #print(sql)
     return sql
+
+def plan_cx(boxn):
+    '''栈板号查询。返回箱号元组'''
+    sql = f"SELECT PLAN,BOX_NO FROM plan_ch WHERE PLAN in (SELECT PLAN FROM plan_ch WHERE BOX_NO='{boxn}' OR PLAN='{boxn}')"
+   
+    conn = pymysql.connect(host="192.168.2.55",user="admin",password="zy=*986",database="chuhuo",charset="utf8")
+
+    df = pd.read_sql(sql,conn)
+
+    conn.close()
+
+    if len(df):
+
+        ktxtm = tuple(df['BOX_NO'])
+
+        sql = gjsql(ktxtm)
+
+        return sql,list(set(df['PLAN']))[0]
+
+    else:
+
+        return None,None
+
 def send_box(xx):
     '''向程序发送状态指示'''
     #time.sleep(500)
@@ -215,15 +247,21 @@ def OnKeyboardEvent(event):
                 key_code = ''
 
             elif(key_code == '101011'):
-                
+                #标记下次扫描为删除操作
                 key_code = ''
 
                 mk = 1 
 
                 print('再次扫描将移除箱号')
 
+            elif(key_code == '101012'):
+                #下次扫描为补打操作
+                key_code = ''
+
+                mk = 2
+
             elif(key_code == '101010'):
-                
+                #正常打印操作
                 ktxtms = tuple(BOX_list)
 
                 if ktxtms:
@@ -232,28 +270,40 @@ def OnKeyboardEvent(event):
 
                     df = sql_out(gjsql(ktxtms))
     
-                    df_zl(df)
+                    df_zl(df=df,bd=True)
 
                     BOX_list.clear()
 
                 
                 print('打印完毕。\n准备下一栈板。',end='')
 
-            elif(key_code not in BOX_list and key_code !='' and len(key_code) == 14):
+            elif(key_code not in BOX_list and len(key_code) == 14 and mk == 0):
 
                 key_code.replace(' ','')
 
                 BOX_list.append(key_code)
+                
+                send_box(len(BOX_list))
 
                 print ('扫描:',key_code,mk,)
-           
+
+            elif(len(key_code) != '' and mk == 2):
+                #补打
+                sql,pl = plan_cx(key_code)
+
+                if sql:
+
+                    df = sql_out(sql)
+
+                    df_zl(df=df,bd=False,zbh=pl)
+                else:
+                    send_box("未查询到")
+                mk = 0
         #print (event.WindowName,end='\r')
         
             print(f"已扫入箱数： {len(BOX_list)}               ",end='\r')
 
             key_code = ''
-            
-            send_box(len(BOX_list))
 
     return True
 
